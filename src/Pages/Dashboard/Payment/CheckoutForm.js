@@ -16,7 +16,7 @@ const CheckoutForm = ({ appointmentDetails }) => {
   const [processing, setProcessing] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:5000/create-payment-intent", {
+    fetch("https://salty-island-18444.herokuapp.com/create-payment-intent", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -79,7 +79,7 @@ const CheckoutForm = ({ appointmentDetails }) => {
         currency: paymentIntent.currency,
         last4: paymentMethod.card.last4,
       };
-      const url = `http://localhost:5000/appointments/${_id}`;
+      const url = `https://salty-island-18444.herokuapp.com/appointments/${_id}`;
       fetch(url, {
         method: "PUT",
         headers: {
