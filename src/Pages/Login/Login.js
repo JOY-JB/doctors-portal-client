@@ -81,7 +81,7 @@ const Login = () => {
                         </form>
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <img style={{ width: "100%" }} src={image} />
+                        <img style={{ width: "100%" }} src={image} alt='' />
                     </Grid>
                 </Grid>
             </Box>

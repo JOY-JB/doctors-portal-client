@@ -7,7 +7,7 @@ const Booking = ({ booking, date, setBookingAppointment }) => {
     const handleBookingOpen = () => setOpenBookingModal(true);
     const handleBookingClose = () => setOpenBookingModal(false);
 
-    const { name, time, space } = booking;
+    const { name, time, space, price } = booking;
     return (
         <>
             <Grid item xs={12} sm={6} md={4}>
@@ -17,6 +17,9 @@ const Booking = ({ booking, date, setBookingAppointment }) => {
                     </Typography>
                     <Typography sx={{ fontWeight: 600 }} variant="h6" component="div" gutterBottom>
                         {time}
+                    </Typography>
+                    <Typography sx={{ mb: 2 }} variant="caption" component="div" gutterBottom>
+                        Price ${price}
                     </Typography>
                     <Typography sx={{ mb: 2 }} variant="caption" component="div" gutterBottom>
                         {space} SPACES AVAILABLE
